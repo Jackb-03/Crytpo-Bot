@@ -83,11 +83,6 @@ class Main:
 
 
 
-amounttype = "aud"
-key = "041f52d99b955ed0467666fe76590ebc"
-secret = "DFMWHXNWCGN0E5F3KJJE1C95Q7NW86PJR2BPKG6A97RL9TDKQWMCHPZA65DZ237L8FQ0TCEBGJMPC0HA"
-secret = secret.encode()
-
 
 
 
