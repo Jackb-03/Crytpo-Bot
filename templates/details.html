@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %} Account Details {% endblock %}
+
+{% block topic %}
+    Account Details
+{% endblock %}
+
+{% block content %}
+
+<p>{{ msg }}</p>
+<form action="/add-details" method="POST">
+
+    <div class="form-group">
+        <div>
+            <label for="APIkey">API Key:</label>
+            <input class="form-control" placeholder="Enter Coinspot API Key" type="text"  name="api_key" id="api_key" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="Secretkey">Secret Key:</label>
+            <input class="form-control" placeholder="Enter Secret Key" type="text" name="api_secret" id="api_secret" required>
+        </div>
+        <br>
+        
+
+    </div>
+    <form>
+        <button class="btn btn-success" type="submit"> Submit </button>
+    </form>
+
+{% endblock %}

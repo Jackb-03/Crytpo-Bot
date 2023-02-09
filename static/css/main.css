@@ -1,0 +1,83 @@
+@import url('http://fonts.cdnfonts.com/css/ocr-a-extended');
+
+body {
+  font-family: "OCR A Extended", sans-serif;
+}
+
+title {
+  color: white;
+}
+
+.sidenav {
+  height: 100%;
+  width: 12%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #007bffa2;
+  overflow-x: hidden;
+  padding-top: 10px;
+}
+
+.sidenav a {
+  padding: 5px 5px 5px 30px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #f1f1f1;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #7e7e7e;
+}
+
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+}
+
+.block-content {
+  margin-top: 60px;
+  margin-left: -100px; /* Same as the width of the sidenav */
+  color: rgb(255, 0, 0);
+}
+
+.main footer {
+  position: absolute;
+  bottom: 0%;
+  width: 84%;
+  height: 60px;
+}
+
+.button {
+  bottom: 100%;
+  height: 60px;
+  margin-top: 20px;
+}
+
+.logo {
+  display: block;
+  margin-right: 50%;
+  margin-top: 0%;
+  margin-left: 30%; 
+  width: 50%;
+}
+
+.flask {
+  margin-left: 12%;
+  margin-top: 255%;
+}
+
+.display-4 {
+  color: #ffffff;
+  display: block;
+  margin-top: 25px;
+  text-align-last: center;
+}
+
+
+@media screen and (max-height: 300px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

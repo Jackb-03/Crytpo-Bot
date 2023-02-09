@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %} New Tracking {% endblock %}
+
+{% block topic %}
+    Add Tracking
+{% endblock %}
+
+{% block content %}
+
+<p>{{ msg }}</p>
+<form action="/add-new-tracking" method="POST">
+
+    <div class="form-group">
+        <div>
+            <label for="Twitteraccount">Twitter account or ID:</label>
+            <input class="form-control" placeholder="Enter Twitter account or ID" type="text"  name="twitteraccount" id="twitteraccount" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="Keyword">Keyword:</label>
+            <input class="form-control" placeholder="Enter a keyword you want to track" type="text" name="keyword" id="keyword" required>
+        </div>
+        <br>
+        
+        <div>
+            <label for="password">Cryptocurrency type:</label>
+            <input class="form-control" placeholder="Enter Cryptocurrency name such as DOGE, BTC, etc" type="text" name="cryptocurrency" id="cryptocurrency" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="password">Amount($):</label>
+            <input class="form-control" placeholder="Enter dollar amount you want purchased" type="text" name="amount" id="amount" required>
+        </div>
+        <br>
+
+    </div>
+<button class="btn btn-success" type="submit"> submit </button>
+</form>
+
+<br>
+  
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %} Edit Tracking {% endblock %}
+
+{% block topic %}
+Change some details?
+{% endblock %}
+
+{% block content %}
+<form action="/update-tracking/{{ tracking['tracking_id'] }}" method="POST" enctype="multipart/form-data">
+        Twitter:
+        <input type="text" name="t_account" value="{{ tracking['tracking_twitteraccount'] }}"><br>
+        Keyword:
+        <input type="text" name="t_keyword" value= "{{ tracking['tracking_keyword'] }}"><br>
+        Cryptocurrency:
+        <input type="text" name="t_cryptocurrency" value="{{ tracking['tracking_cryptocurrency'] }}"><br>
+        Amount:
+        <input type="text" name="t_amount" value= "{{ tracking['tracking_amount'] }}"><br>
+
+    <form>
+        <button class="btn btn-primary" type="submit">update</button>
+    </form>
+{% endblock %}

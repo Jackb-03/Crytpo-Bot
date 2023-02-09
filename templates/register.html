@@ -1,0 +1,44 @@
+{% extends "layout2.html" %}
+
+{% block title %} Register {% endblock %}
+
+{% block topic %}
+<img src="static/images/cryptobotnamelogo.png" alt="background" width="50%" height="50%">
+{% endblock %}
+
+{% block content %}
+<form action="/login" method = "GET">
+<button class="btn btn-danger" style=" margin-left: 93%;" type="submit"> Login </button>
+</form>
+
+<p> {{ msg }} </p>
+
+<form action="/create-account" method="POST">
+    <div class="form-group">
+
+        <div>
+            <label for="username">Username:</label>
+            <input class="form-control" placeholder="Enter username" type="text"  name="username" id="username" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="password">Password:</label>
+            <input class="form-control" placeholder="Enter password" type="password" name="password" id="password" required>
+        </div>
+        <br>
+        
+        <div>
+            <label for="confirm_password">Confirm Password:</label>
+            <input class="form-control" placeholder="Confirm password" type="password" name="confirm_password" id="confirm_password" required>
+        </div>
+        <br>
+
+
+    </div>
+
+  <button class="btn btn-success" type="submit"> Register </button>
+  
+</form>
+<br>
+{% endblock %}

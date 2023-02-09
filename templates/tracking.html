@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %} Tracking {% endblock %}
+
+{% block topic %}
+    Tracking
+{% endblock %}
+
+{% block content %}
+
+    <p>{{ msg }}</p>
+
+
+    {% if tracking %}
+    <table class="table table-stripes text-white">
+    <thead>
+        <th>Twitter Account</th>
+        <th>Keyword</th>
+        <th>Cryptocurrency</th>
+        <th>Amount</th>
+        <th> </th>
+
+    </thead>
+
+
+    {% for c in tracking %}
+        <tr>
+        <td>{{ c["tracking_twitteraccount"] }}</td>
+        <td>{{ c["tracking_keyword"] }}</td>
+        <td>{{ c["tracking_cryptocurrency"] }}</td>
+        <td>{{ c["tracking_amount"] }}</td>
+        <td>
+
+
+            <span style="font-size: 30px;">
+            <a class="fas fa-edit" href="/edit-tracking/{{ c['tracking_id'] }}"></a>
+            </span>
+
+            <span style="font-size: 25px;">
+                <a class="fas fa-trash-alt fa-lg fa-danger" href="/del-confirm/{{ c['tracking_id'] }}" style="color:red"></a>
+            </span>
+        </td>
+        </tr>
+    {% endfor %}
+    </table>
+
+{% endif %}
+{% endblock %}

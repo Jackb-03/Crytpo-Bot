@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %} Transactions {% endblock %}
+
+{% block topic %}
+    Transactions
+{% endblock %}
+
+{% block content %}
+
+    <p>{{ msg }}</p>
+
+
+    {% if transactions %}
+    <table class="table table-stripes text-white">
+    <thead>
+        <th>Twitter Account</th>
+        <th>Keyword</th>
+        <th>Cryptocurrency</th>
+        <th>Amount</th>
+        <th>Date and Time purchased</th>
+        <th> </th>
+
+    </thead>
+
+
+    {% for c in transactions %}
+        <tr>
+        <td>{{ c["transaction_twitteraccount"] }}</td>
+        <td>{{ c["transaction_keyword"] }}</td>
+        <td>{{ c["transaction_cryptocurrency"] }}</td>
+        <td style="color: green;">${{ c["transaction_amount"] }}</td>
+        <td>{{c["transaction_bought"] }}</td>
+        <td>
+        </td>
+        </tr>
+    {% endfor %}
+    </table>
+
+{% endif %}
+{% endblock %}
